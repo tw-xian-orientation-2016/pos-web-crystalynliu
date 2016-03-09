@@ -38,41 +38,20 @@
     <table class="table table-bordered table-hover">
       <thead>
         <th name="name">Name</th>
-        <th name="description">Description</th>
         <th name="price">Price</th>
         <th name="count">Count</th>
+        <th name="unit">Unit</th>
         <th name="subTotal">SubTotal</th>
       </thead>
-      <tbody class="text-center">
-        <tr data-itemId="1"> 
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-        </tr>
-        <tr data-itemId="1">
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-        </tr>
-        <tr data-itemId="1">
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-        </tr>
+      <tbody id = "cartlist" class="text-center">
+        
       </tbody>
     </table>
     <section>
       <div>
-        <h3>
-        <span class="label label-danger">Total:</span>
-        <span id="totalprice">$6.00</span>
-        </h3>
+        <h2 class="text-center">
+        <span class="label label-danger">Total:<span id="totalprice"></span></span>
+        </h2>
       </div>
     </section>
   </article>
@@ -86,5 +65,8 @@
   
   <script src="../lib/jquery-1.12.1.min.js"></script>
   <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/storage.js"></script>
+  <script type="text/javascript" src="../js/Item.js"></script>
+  <script type="text/javascript" src="../js/loadReceipt.js"></script>
 </body>
 </html>
