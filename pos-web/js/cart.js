@@ -13,6 +13,18 @@ function updateCart(itemId) {
   return cart.length;
 }
 
+function updateCart(itemId,count) {
+  var cart = getStorage('Cart')
+  var index = findIndexofCart(itemId,cart);
+  var price = findItem(itemId).price;
+
+  cart[index].count=count;
+  cart[index].subtotal=count*price;
+
+  setStorage('Cart',cart);
+  return cart;
+}
+
 function findIndexofCart(itemId,Cart){
   var index = -1;
     Cart.forEach(function(cartItem,i){
@@ -21,4 +33,11 @@ function findIndexofCart(itemId,Cart){
       }
     })
   return index;
+}
+
+function calculateTotalPrice(cart){
+  var totalPrice = cart.reduce(function(p,c){
+    return p+=c.subtotal;
+  },0)
+  return totalPrice;
 }
