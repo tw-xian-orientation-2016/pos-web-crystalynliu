@@ -44,7 +44,7 @@ function initStorage() {
   ];
   setStorage("Items",Items);
   setStorage("Cart",[]);
-  setStorage("Receipts",[]);
+  setStorage("TradeRecord",[]);
   setStorage("tempReceipt","");
   
 }
@@ -55,4 +55,8 @@ function setStorage(key,value){
 
 function getStorage(key){
   return JSON.parse(localStorage.getItem(key));
+}
+
+function clearStorage(key){
+  localStorage.clear(key);
 }

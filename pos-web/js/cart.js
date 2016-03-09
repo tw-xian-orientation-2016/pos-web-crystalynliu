@@ -41,3 +41,14 @@ function calculateTotalPrice(cart){
   },0)
   return totalPrice;
 }
+
+function deleteCartItem(itemId){
+  var cart = getStorage("Cart");
+  var newCart = cart.filter(function(cartItem){
+    if(cartItem.itemId!=itemId){
+      return cartItem;
+    }
+  })
+  setStorage("Cart",newCart);
+  return newCart;
+}
