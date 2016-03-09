@@ -18,12 +18,6 @@
             <span class ="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
           </a >
         </li>
-        <li>
-          <a href="#" role="button" class="btn btn-default btn-lg" >
-            <span class ="glyphicon glyphicon glyphicon-list" aria-hidden="true"></span>
-            <span id = "count">4</span>
-          </a >
-        </li>
       </ul>
     </div>
   </div>
@@ -42,60 +36,15 @@
         <th name="detailsBtn"></th>
         <th name="buttun"></th>
       </thead>
-      <tbody class="text-center">
-        <tr data-itemId="1"> 
-          <td>2016.06.1</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-          <td>
-            <button data-itemId="1" class="btn btn-primary">
-            <span class="glyphicon glyphicon-list-alt"></span>
-            </button>
-          </td>
-          <td>
-            <button data-itemId="1" class="btn btn-danger">
-            <span class="glyphicon glyphicon-trash"></span>
-            </button>
-          </td>
-        </tr>
-        <tr data-itemId="1">
-          <td>2016.06.1</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-          <td>
-            <button data-itemId="1" class="btn btn-primary">
-            <span class="glyphicon glyphicon-list-alt"></span>
-            </button>
-          </td>
-          <td>
-            <button data-itemId="1" class="btn btn-danger">
-            <span class="glyphicon glyphicon glyphicon-trash"></span>
-            </button>
-          </td>
-        </tr>
-        <tr data-itemId="1">
-          <td>2016.06.1</td>
-          <td>2</td>
-          <td name="total">6.00</td>
-          <td>
-            <button data-itemId="1" class="btn btn-primary">
-            <span class="glyphicon glyphicon-list-alt"></span>
-            </button>
-          </td>
-          <td>
-            <button data-itemId="1" class="btn btn-danger">
-            <span class="glyphicon glyphicon-trash"></span>
-            </button>
-          </td>
-        </tr>
+      <tbody id = "recodelist" class="text-center">
+        
       </tbody>
     </table>
     <section>
       <div>
-        <h3>
-        <span class="label label-danger">Total:</span>
-        <span id="totalprice">$6.00</span>
-        </h3>
+        <h2 class="text-center">
+        <span class="label label-danger">Total:<span id="allprice"></span></span>
+        </h2>
       </div>
     </section>
   </article>
@@ -109,5 +58,7 @@
   
   <script src="../lib/jquery-1.12.1.min.js"></script>
   <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/storage.js"></script>
+  <script type="text/javascript" src="../js/loadRecord.js"></script>
 </body>
 </html>
