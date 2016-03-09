@@ -16,13 +16,13 @@
         <li>
           <a href="page/cart.html" role="button" class="btn btn-default btn-lg">
             <span class ="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-            <span id = "count">3</span>
+            <span id = "cartCount">3</span>
           </a >
         </li>
         <li>
           <a href="#" role="button" class="btn btn-default btn-lg" >
-            <span class ="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-            <span id = "count">4</span>
+            <span class ="glyphicon glyphicon-list" aria-hidden="true"></span>
+            <span id = "recordCount">4</span>
           </a >
         </li>
       </ul>
@@ -39,45 +39,13 @@
     <table class="table table-bordered table-hover">
       <thead>
         <th name="name">Name</th>
-        <th name="description">Description</th>
+        <th name="unit">Unit</th>
         <th name="price">Price</th>
         <th name="heart">Heart</th>
         <th name="button"></th>
       </thead>
-      <tbody class="text-center">
-        <tr> 
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td><span class="glyphicon glyphicon-heart"></span>2</td>
-          <td>
-            <button data-itemId="1" class="btn btn-danger">
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td><span class="glyphicon glyphicon-heart"></span>2</td>
-          <td>
-            <button data-itemId="2" class="btn btn-danger">
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>coco</td>
-          <td>lllllllll</td>
-          <td>3.00</td>
-          <td><span class="glyphicon glyphicon-heart"></span>2</td>
-          <td>
-            <button data-itemId="3" class="btn btn-danger">
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            </button>
-          </td>
-        </tr>
+      <tbody id = "itemlist" class="text-center">
+        
       </tbody>
     </table>
   </article>
@@ -89,7 +57,11 @@
     </div>
   </footer>
   
-  <script src="../lib/jquery-1.12.1.min.js"></script>
-  <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/storage.js"></script>
+  <script type="text/javascript" src="js/Item.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
