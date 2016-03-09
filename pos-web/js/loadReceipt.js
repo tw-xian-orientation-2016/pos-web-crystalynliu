@@ -10,8 +10,8 @@ $(document).ready(function () {
         +cartItem.subtotal+"</td></tr>";
     $("#cartlist").append(tr);
   })
-  $('#cartCount').text(receipt.cart.length);
+  $('#totalCount').text(receipt.cart.length);
   $('#totalprice').text("$"+receipt.totalprice);
-  var tradeRecord = getStorage("Receipts");
+  var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
 })

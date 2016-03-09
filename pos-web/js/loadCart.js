@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#cartlist").append(tr);
   })
   $('#totalCount').text(cart.length);
-  var tradeRecord = getStorage("Receipts");
+  var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
   var totalprice = calculateTotalPrice(cart);
   $('#totalprice').text("$"+totalprice);

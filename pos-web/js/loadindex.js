@@ -15,7 +15,7 @@ $(document).ready(function () {
   })
   var cart = getStorage('Cart');
   $('#cartCount').text(cart.length);
-  var tradeRecord = getStorage("Receipts");
+  var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
 })
 
