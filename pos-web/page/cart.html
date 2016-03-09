@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Small Store--Cart</title>
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Brand
+      </a>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="../index.html" role="button" class="btn btn-default btn-lg">
+            <span class ="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+          </a >
+        </li>
+        <li>
+          <a href="#" role="button" class="btn btn-default btn-lg" >
+            <span class ="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+            <span id = "count">4</span>
+          </a >
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <header class="page-header">
+    <div>
+      <h1><span class="label label-primary">Small Store</span><small>Cart</small></h1>
+    </div>
+  </header>
+  <article>
+  <h3 class="text-right"><span class="label label-info">TotalCount:<span id="totalCount">6</span></span></h3>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th name="name">Name</th>
+        <th name="description">Description</th>
+        <th name="price">Price</th>
+        <th name="count">Count</th>
+        <th name="subTotal">SubTotal</th>
+        <th name="button"></th>
+      </thead>
+      <tbody class="text-center">
+        <tr data-itemId="1"> 
+          <td>coco</td>
+          <td>lllllllll</td>
+          <td>3.00</td>
+          <td><input name="countInput" value="2"></input></td>
+          <td name="total">6.00</td>
+          <td>
+            <button data-itemId="1" class="btn btn-danger">
+            <span class="glyphicon glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+        <tr data-itemId="1">
+          <td>coco</td>
+          <td>lllllllll</td>
+          <td>3.00</td>
+          <td><input name="countInput" value="2"></input></td>
+          <td name="total">6.00</td>
+          <td>
+            <button data-itemId="2" class="btn btn-danger">
+            <span class="glyphicon glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+        <tr data-itemId="1">
+          <td>coco</td>
+          <td>lllllllll</td>
+          <td>3.00</td>
+          <td><input name="countInput" value="2"></input></td>
+          <td name="total">6.00</td>
+          <td>
+            <button data-itemId="3" class="btn btn-danger">
+            <span class="glyphicon glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <section>
+      <div>
+        <h3>
+        <span class="label label-danger">Total:</span>
+        <span id="totalprice">$6.00</span>
+        </h3>
+        <div class="text-right">
+        <button class="btn btn-lg btn-success">
+          checkout
+        </button></div>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="text-center">
+      <span>&copy;Design by Crystalynliu</span>
+
+    </div>
+  </footer>
+  
+  <script src="../lib/jquery-1.12.1.min.js"></script>
+  <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
