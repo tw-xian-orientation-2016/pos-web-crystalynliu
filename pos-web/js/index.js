@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 $('#itemlist').on('click','button[name=addCart]',function(){
   var itemId = $(this).data('itemid');
-  var cartCount = updateCart(itemId);
+  var cartCount = addCart(itemId);
   $('#cartCount').text(cartCount);
 })
 

@@ -1,9 +1,9 @@
-function updateCart(itemId) {
+function addCart(itemId) {
   var cart = getStorage('Cart')
   var index = findIndexofCart(itemId,cart);
   var price = findItem(itemId).price;
   
-  if(index==-1){
+  if(index===-1){
     cart.push({itemId:itemId,count:1,subtotal:price});
   }else{
     cart[index].count++;
