@@ -10,7 +10,8 @@ function addCart(itemId) {
     cart[index].subtotal+=price;
   }
   setStorage('Cart',cart);
-  return cart.length;
+  var count = getItemsCount(cart)
+  return count;
 }
 
 function updateCart(itemId,count) {
@@ -41,6 +42,8 @@ function calculateTotalPrice(cart){
   },0)
   return totalPrice;
 }
+
+
 
 function deleteCartItem(itemId){
   var cart = getStorage("Cart");
