@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Small Store--TradeRecord</title>
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://github.com/crystalynliu">
+        <i id="github" class="icon-github"></i>
+      </a>
+    </div>
+    <div class="pull-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id = "home" href="../index.html" role="button" class="btn btn-default btn-lg">
+            <span class ="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+          </a >
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <header class="page-header">
+    <div class="text-left">
+      <h1 id="flag" >Small Store<small><i class="icon-quote-right"></i>TradeRecord</small></h1>
+      
+    </div>
+  </header>
+  <article>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <th name="time">Time</th>
+        <th name="totalcount">TotalCount</th>
+        <th name="totalPrice">TotalPrice</th>
+        <th name="detailsBtn"></th>
+        <th name="buttun"></th>
+      </thead>
+      <tbody id = "recodelist" class="text-center">
+        
+      </tbody>
+    </table>
+    <section>
+      <div >
+        <h2 class="text-center">
+        <span class="label label-success" id="summary">
+        <span >SummaryCount:<span id="allcount"></span></span>
+        <span>|</span>
+        <span >SummaryPrice:<span id="allprice"></span></span></span>
+        </h2>
+      </div>
+    </section>
+  </article>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div id="copy" class="text-left pull-left">
+      <span>&copy;Design by Crystalynliu</span>
+    </div>
+    <div id = "appraise" class="pull-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button name="1"class="btn btn-default btn-lg">
+            <span  class ="glyphicon icon-thumbs-up" aria-hidden="true"></span>
+            <span id = "star">0</span>
+          </button >
+        </li>
+        <li>
+          <button name="0" class="btn btn-default btn-lg" >
+            <span  class ="glyphicon icon-thumbs-down" aria-hidden="true"></span>
+            <span id = "unstar">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <script src="../lib/jquery-1.12.1.min.js"></script>
+  <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/storage.js"></script>
+  <script type="text/javascript" src="../js/Item.js"></script>
+  <script type="text/javascript" src="../js/loadRecord.js"></script>
+</body>
+</html>

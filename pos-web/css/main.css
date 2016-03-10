@@ -1,0 +1,57 @@
+body{
+  width:95%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+nav #github{
+  font-size: 1.5em;
+}
+
+nav #cartFlag span{
+  color: rgb(232,48,21);
+}
+
+#flag{
+  font-size: 4em;
+  font-weight: 500;
+}
+
+#welcome{
+  letter-spacing: -4px;
+  font-weight: 500;
+}
+
+#home{
+  color: rgb(134,193,102);
+}
+nav #recordFlag span{
+  color: rgb(0,137,167);
+}
+
+#heart{
+  color: rgb(233,139,42);
+}
+
+footer{
+  margin: 30px 0;
+}
+
+#copy{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+#checkout,#summary,#total{
+  padding: 10px 30px;
+}
+
+#receiptTime{
+  font-weight: 600;
+}
+
+#message{
+  display: none;
+  margin-top: 50px;
+}
