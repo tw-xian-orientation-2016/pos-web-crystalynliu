@@ -1,10 +1,12 @@
 $(document).ready(function () {
   var tradeRecord = getStorage('TradeRecord');
   var allPrice=0;
+  var allCount=0;
   tradeRecord.forEach(function(record){
     allPrice+=record.totalprice;
+    allCount+=getItemsCount(record.cart);
     var tr = "<tr data-time='"+record.time+"'><td>"+record.time+"</td><td>"
-        +record.cart.length+"</td><td name='total'>"+record.totalprice
+        +getItemsCount(record.cart)+"</td><td name='total'>"+priceFormat(record.totalprice)
         +"</td><td><button name='details' data-time='"+record.time
         +"' class='btn btn-primary'><span class='glyphicon glyphicon-list-alt'>"
         +"</span></button></td><td><button name='delete' data-time='"+record.time
@@ -13,7 +15,8 @@ $(document).ready(function () {
     $("#recodelist").append(tr);
 
   })
-  $('#allprice').text("$"+allPrice);
+  $('#allprice').text(priceFormat(allPrice));
+  $('#allcount').text(allCount);
 })
 
 $('#recodelist').on('click','[name=details]',function(){
@@ -38,9 +41,12 @@ $('#recodelist').on('click','[name=delete]',function(){
     var tr = $("tr[data-time='"+recodeTime+"']");
     tr.remove();
     var allPrice = 0;
+    var allCount = 0;
     newTradeRecord.forEach(function(record){
       allPrice+=record.totalprice;
+      allCount+=getItemsCount(record.cart);
     })
-    $('#allprice').text("$"+allPrice);
+    $('#allprice').text(priceFormat(allPrice));
+    $('#allcount').text(allCount);
     setStorage("TradeRecord",newTradeRecord);
 })

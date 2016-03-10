@@ -5,16 +5,16 @@ $(document).ready(function () {
     items = getStorage('Items');
   }
   items.forEach(function(item){
-    var tr = "<tr><td>"+item.name+"</td><td>"+
-    item.unit+"</td><td>"+item.price+"</td><td>"+
-    "<span class='glyphicon glyphicon-heart'></span>"+item.heart+
+    var tr = "<tr><td>"+item.name+"</td><td>"+priceFormat(item.price)+
+    "</td><td>"+item.unit+"</td><td>"+
+    "<i id='heart' class='glyphicon icon-heart'></i>"+item.heart+
     "</td><td><button name='addCart' data-itemId='"+item.itemId+
     "' class='btn btn-danger'><span class='glyphicon glyphicon-shopping-cart'>"
     +"</span></button></td></tr>";
     $("#itemlist").append(tr);
   })
   var cart = getStorage('Cart');
-  $('#cartCount').text(cart.length);
+  $('#cartCount').text(getItemsCount(cart));
   var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
 })

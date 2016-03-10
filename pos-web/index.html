@@ -4,24 +4,28 @@
   <meta charset="UTF-8">
   <title>Small Store--index</title>
   <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        Brand
+      <a class="navbar-brand" href="https://github.com/crystalynliu">
+        <i id="github" class="icon-github"></i>
       </a>
+    </div>
+    <div class="pull-right">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="page/cart.html" role="button" class="btn btn-default btn-lg">
-            <span class ="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+          <a id="cartFlag" href="page/cart.html" role="button" class="btn btn-default btn-lg">
+            <span  class ="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
             <span id = "cartCount"></span>
           </a >
         </li>
         <li>
-          <a href="page/tradeRecord.html" role="button" class="btn btn-default btn-lg" >
-            <span class ="glyphicon glyphicon-list" aria-hidden="true"></span>
+          <a id="recordFlag" href="page/tradeRecord.html" role="button" class="btn btn-default btn-lg" >
+            <span  class ="glyphicon glyphicon-list" aria-hidden="true"></span>
             <span id = "recordCount"></span>
           </a >
         </li>
@@ -31,16 +35,17 @@
   </nav>
   <header class="page-header">
     <div class="text-center">
-      <h1><span class="label label-primary">Small Store</span></h1>
-      <h2>WELCOME</h2>
+      <h1 id="flag" >Small Store</h1>
+      <h2><small><i class="icon-quote-left"></i></small></h2>
+      <h2 id="welcome">WELCOME</h2>
     </div>
   </header>
   <article>
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover table-striped">
       <thead>
         <th name="name">Name</th>
-        <th name="unit">Unit</th>
         <th name="price">Price</th>
+         <th name="unit">Unit</th>
         <th name="heart">Heart</th>
         <th name="button"></th>
       </thead>
@@ -50,12 +55,29 @@
     </table>
   </article>
 
-  <footer>
-    <div class="text-center">
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div id="copy" class="text-left pull-left">
       <span>&copy;Design by Crystalynliu</span>
-
     </div>
-  </footer>
+    <div class="pull-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button class="btn btn-default btn-lg">
+            <span  class ="glyphicon icon-thumbs-up" aria-hidden="true"></span>
+            <span id = "star">0</span>
+          </button >
+        </li>
+        <li>
+          <button href="page/tradeRecord.html" role="button" class="btn btn-default btn-lg" >
+            <span  class ="glyphicon icon-thumbs-down" aria-hidden="true"></span>
+            <span id = "unstar">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
   
   <script type="text/javascript" src="../lib/jquery-1.12.1.min.js"></script>
   <script type="text/javascript" src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>

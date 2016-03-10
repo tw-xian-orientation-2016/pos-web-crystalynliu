@@ -6,38 +6,42 @@ $(document).ready(function () {
         +item.name+"</td><td>"+item.price
         +"</td><td><input name='countInput' data-itemId='"+cartItem.itemId+"' value='"
         +cartItem.count+"''></td><td>"+item.unit+"</td><td name='subtotal'>"
-        +cartItem.subtotal+"</td><td><button name='delete' data-itemId='"
+        +priceFormat(cartItem.subtotal)+"</td><td><button name='delete' data-itemId='"
         +cartItem.itemId+"'class='btn btn-danger'>"
         +"<span class='glyphicon glyphicon glyphicon-trash'></span></button></td></tr>";
     $("#cartlist").append(tr);
   })
-  $('#totalCount').text(cart.length);
+  $('#totalCount').text(getItemsCount(cart));
   var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
   var totalprice = calculateTotalPrice(cart);
-  $('#totalprice').text("$"+totalprice);
+  $('#totalprice').text(priceFormat(totalprice));
 })
 
 $('#cartlist').on('change','[name=countInput]',function(){
     var count = $(this).val();
+    if(count===""){
+      count=1;
+      $(this).val(count);
+    }
     var itemId = $(this).data("itemid");
     var cart = updateCart(itemId,count);
-    $('#totalCount').text(cart.length);
+    $('#totalCount').text(getItemsCount(cart));
     var index = findIndexofCart(itemId,cart);
-    $(this).parent().siblings('[name=subtotal]').text(cart[index].subtotal);
+    $(this).parent().siblings('[name=subtotal]').text(priceFormat(cart[index].subtotal));
     var totalprice = calculateTotalPrice(cart);
-    $('#totalprice').text("$"+totalprice);
+    $('#totalprice').text(priceFormat(totalprice));
 })
 
 $('#cartlist').on('click','[name=delete]',function(){
     var itemId = $(this).data("itemid");
     var cart = deleteCartItem(itemId);
 
-    $('#totalCount').text(cart.length);
+    $('#totalCount').text(getItemsCount(cart));
     var trDel = $('tr[data-itemid='+itemId+']');
     trDel.remove();
     var totalprice = calculateTotalPrice(cart);
-    $('#totalprice').text("$"+totalprice);
+    $('#totalprice').text(priceFormat(totalprice));
 })
 
 $('#checkout').click(function(){
