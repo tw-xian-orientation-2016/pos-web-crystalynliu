@@ -38,11 +38,7 @@ function priceFormat(price){
   return price;
 };
 
-function loadData(){
-  var cart = getStorage('Cart');
-  $('#cartCount').text(getItemsCount(cart));
-  var tradeRecord = getStorage("TradeRecord");
-  $('#recordCount').text(tradeRecord.length);
+function loadStar(){
   var star = getStorage('star');
   $('#star').text(star.star);
   $('#unstar').text(star.unstar);

@@ -12,13 +12,12 @@ $(document).ready(function () {
     $("#cartlist").append(tr);
   })
   $('#totalCount').text(getItemsCount(cart));
-  var tradeRecord = getStorage("TradeRecord");
-  $('#recordCount').text(tradeRecord.length);
   var totalprice = calculateTotalPrice(cart);
   $('#totalprice').text(priceFormat(totalprice));
-    var star = getStorage('star');
-  $('#star').text(star.star);
-  $('#unstar').text(star.unstar);
+
+  var tradeRecord = getStorage("TradeRecord");
+  $('#recordCount').text(tradeRecord.length);
+  loadStar();
 })
 
 $('#cartlist').on('change','[name=countInput]',function(){

@@ -17,9 +17,7 @@ $(document).ready(function () {
   $('#cartCount').text(getItemsCount(cart));
   var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
-  var star = getStorage('star');
-  $('#star').text(star.star);
-  $('#unstar').text(star.unstar);
+  loadStar();
 })
 
 
