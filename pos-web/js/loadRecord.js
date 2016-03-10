@@ -8,9 +8,9 @@ $(document).ready(function () {
     var tr = "<tr data-time='"+record.time+"'><td>"+record.time+"</td><td>"
         +getItemsCount(record.cart)+"</td><td name='total'>"+priceFormat(record.totalprice)
         +"</td><td><button name='details' data-time='"+record.time
-        +"' class='btn btn-primary'><span class='glyphicon glyphicon-list-alt'>"
+        +"' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-list-alt '>"
         +"</span></button></td><td><button name='delete' data-time='"+record.time
-        +"' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span>"
+        +"' class='btn btn-danger btn-sm'><span class='glyphicon glyphicon-trash'></span>"
            + "</button></td></tr>";
     $("#recodelist").append(tr);
 

@@ -3,11 +3,11 @@ $(document).ready(function () {
   cart.forEach(function(cartItem){
     var item = findItem(cartItem.itemId);
     var tr = "<tr data-itemId='"+cartItem.itemId+"''><td>"
-        +item.name+"</td><td>"+item.price
+        +item.name+"</td><td>"+priceFormat(item.price)
         +"</td><td><input name='countInput' data-itemId='"+cartItem.itemId+"' value='"
         +cartItem.count+"''></td><td>"+item.unit+"</td><td name='subtotal'>"
         +priceFormat(cartItem.subtotal)+"</td><td><button name='delete' data-itemId='"
-        +cartItem.itemId+"'class='btn btn-danger'>"
+        +cartItem.itemId+"'class='btn btn-danger btn-sm'>"
         +"<span class='glyphicon glyphicon glyphicon-trash'></span></button></td></tr>";
     $("#cartlist").append(tr);
   })
