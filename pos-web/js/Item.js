@@ -37,3 +37,31 @@ function priceFormat(price){
   price = "$" + price.match(/\d+\.\d{2}/)[0];
   return price;
 };
+
+function loadData(){
+  var cart = getStorage('Cart');
+  $('#cartCount').text(getItemsCount(cart));
+  var tradeRecord = getStorage("TradeRecord");
+  $('#recordCount').text(tradeRecord.length);
+  var star = getStorage('star');
+  $('#star').text(star.star);
+  $('#unstar').text(star.unstar);
+}
+
+function updateStar(flag){
+  var star = getStorage('star');
+  if(flag==='1'){
+    star.star++;
+  }else{
+    star.unstar++;
+  }
+  setStorage('star',star);
+}
+
+$('#appraise button').click(function(){
+  var flag = $(this).attr('name');
+  updateStar(flag);
+  var star = getStorage('star');
+  $('#star').text(star.star);
+  $('#unstar').text(star.unstar);
+})

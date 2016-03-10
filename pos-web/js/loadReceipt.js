@@ -15,4 +15,7 @@ $(document).ready(function () {
   var tradeRecord = getStorage("TradeRecord");
   $('#recordCount').text(tradeRecord.length);
   $('#receiptTime').text(receipt.time);
+    var star = getStorage('star');
+  $('#star').text(star.star);
+  $('#unstar').text(star.unstar);
 })

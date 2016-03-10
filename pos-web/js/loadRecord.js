@@ -17,6 +17,9 @@ $(document).ready(function () {
   })
   $('#allprice').text(priceFormat(allPrice));
   $('#allcount').text(allCount);
+  var star = getStorage('star');
+  $('#star').text(star.star);
+  $('#unstar').text(star.unstar);
 })
 
 $('#recodelist').on('click','[name=details]',function(){

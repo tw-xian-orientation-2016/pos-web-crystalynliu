@@ -16,6 +16,9 @@ $(document).ready(function () {
   $('#recordCount').text(tradeRecord.length);
   var totalprice = calculateTotalPrice(cart);
   $('#totalprice').text(priceFormat(totalprice));
+    var star = getStorage('star');
+  $('#star').text(star.star);
+  $('#unstar').text(star.unstar);
 })
 
 $('#cartlist').on('change','[name=countInput]',function(){

@@ -25,7 +25,7 @@ function initStorage() {
       name: '荔枝',
       unit: '斤',
       price: 15.0,
-      heart:00
+      heart:0
     },
     {
       itemId: '4',
@@ -46,6 +46,7 @@ function initStorage() {
   setStorage("Cart",[]);
   setStorage("TradeRecord",[]);
   setStorage("tempReceipt","");
+  setStorage("star",{star:0,unstar:0});
   
 }
 
