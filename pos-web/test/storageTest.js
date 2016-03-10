@@ -44,9 +44,11 @@ describe('setStorage()',function () {
     }
   ]
 
+    spyOn(localStorage,'setItem').and.callThrough();
     setStorage("Items",items);
     var expectation = JSON.stringify(items);
     var result = localStorage.getItem("Items");
+    expect(localStorage.setItem).toHaveBeenCalled();
     expect(result).toEqual(expectation);
   })
 })
